@@ -1,0 +1,28 @@
+[package]
+name = "local_convert_core"
+version = "0.1.0"
+edition = "2021"
+description = "Motor nativo en Rust de alto rendimiento para procesamiento 100% offline en LocalConvert"
+
+[lib]
+name = "local_convert_core"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+calamine = "0.26"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp", "bmp", "tiff", "gif", "ico", "tga"] }
+lopdf = "0.34"
+printpdf = "0.7"
+qrcode = { version = "0.14", default-features = false, features = ["svg"] }
+quick-xml = "0.31"
+rayon = "1.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+ttf-parser = "0.24"
+zip = { version = "~2.2.0", default-features = false, features = ["deflate"] }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true

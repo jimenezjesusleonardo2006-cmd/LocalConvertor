@@ -1,0 +1,60 @@
+﻿name: local_convert
+description: >-
+  Suite multiplataforma 100% offline y privada para conversión y manipulación
+  de PDFs, imágenes y documentos sin servidor ni permisos de red.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Manejo de Estado e Inyección de Dependencias ---
+  flutter_riverpod: ^3.4.3
+
+  # --- Motor PDF Local (Zero-Server) ---
+  pdf: ^3.13.1
+  printing: ^5.15.1
+  syncfusion_flutter_pdf: ^35.2.12
+
+  # --- Motor de Procesamiento de Imágenes en Memoria ---
+  image: ^4.12.0
+  flutter_svg: ^2.4.0
+
+  # --- Documentos, Texto y Empaquetado ---
+  markdown: ^7.2.2
+  archive: ^4.5.2
+  csv: ^8.0.0
+  xml: ^7.0.1
+
+  # --- Gestión de Archivos y Sandbox Local ---
+  file_picker: ^13.3.0
+  desktop_drop: ^0.8.0
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  share_plus: ^13.3.1
+
+  # --- Multimedia / Conexión Directa YouTube ---
+  youtube_explode_dart: ^3.1.0
+
+  # --- UI / UX Adaptativa ---
+  lucide_icons_flutter: ^4.0.3
+  reorderable_grid_view: ^2.2.8
+
+dependency_overrides:
+  xml: ^7.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/
+    - assets/icons/
+
